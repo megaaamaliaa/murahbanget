@@ -325,30 +325,454 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 ═══════════════════════════════════════════════════════ -->
 <script>
 const products = [
-  {id:"dress-viral-2026",name:"Dress Crinkle Airflow Viral TikTok",cat:"fashion",viral:true,price:"Rp85.000",ori:"Rp199.000",disc:"-57%",terjual:"12rb+",foto:"",icon:"👗",shopee:"GANTI_LINK_1",desc:"Dress crinkle airflow yang viral di TikTok. Bahan adem, anti kusut, cocok untuk hari-hari santai maupun kondangan casual.",specs:[["Bahan","Crinkle airflow"],["Ukuran","S-XXL"],["Warna","15 pilihan"],["Berat","250gr"]]},
-  {id:"vacuum-cleaner-mini",name:"Vacuum Cleaner Mini Wireless Viral",cat:"rumah",viral:true,price:"Rp79.000",ori:"Rp259.000",disc:"-70%",terjual:"8rb+",foto:"",icon:"🏠",shopee:"GANTI_LINK_2",desc:"Vacuum cleaner mini wireless yang lagi viral. Mudah dibawa, baterai tahan lama, cocok untuk bersihin sofa, meja, dan mobil.",specs:[["Daya hisap","8000Pa"],["Baterai","2000mAh"],["Berat","450gr"],["Garansi","6 bulan"]]},
-  {id:"earphone-tws-viral",name:"TWS Earphone Bluetooth 5.3 Bass",cat:"elektronik",viral:true,price:"Rp45.000",ori:"Rp189.000",disc:"-76%",terjual:"25rb+",foto:"",icon:"📱",shopee:"GANTI_LINK_3",desc:"TWS earphone dengan Bluetooth 5.3 terbaru. Bass jernih, latency rendah, cocok gaming maupun dengerin musik.",specs:[["Bluetooth","5.3"],["Battery","300mAh case"],["Latency","<60ms"],["Garansi","3 bulan"]]},
-  {id:"skincare-snail-serum",name:"Snail Mucin Serum 96% Viral Korea",cat:"kecantikan",viral:true,price:"Rp55.000",ori:"Rp180.000",disc:"-69%",terjual:"30rb+",foto:"",icon:"💄",shopee:"GANTI_LINK_4",desc:"Serum snail mucin 96% yang viral dari Korea. Melembabkan, mencerahkan, dan membantu regenerasi kulit secara alami.",specs:[["Kandungan","Snail Mucin 96%"],["Volume","100ml"],["Kulit","Semua jenis"],["BPOM","Terdaftar"]]},
-  {id:"mie-instant-viral",name:"Mie Instan Kuah Kari Viral 1 Dus",cat:"makanan",viral:false,price:"Rp62.000",ori:"Rp95.000",disc:"-35%",terjual:"5rb+",foto:"",icon:"🍜",shopee:"GANTI_LINK_5",desc:"Mie instan kuah kari yang lagi hits di medsos. Rasa autentik, porsi kenyang, cocok untuk makan siang atau malam.",specs:[["Isi","10 bungkus"],["Berat","850gr"],["Expired","12 bulan"],["Halal","MUI"]]},
-  {id:"pampers-bayi-viral",name:"Pampers Bayi Ultra Thin Dry",cat:"bayi",viral:true,price:"Rp89.000",ori:"Rp149.000",disc:"-40%",terjual:"7rb+",foto:"",icon:"🍼",shopee:"GANTI_LINK_6",desc:"Pampers ultra thin dengan teknologi dry surface. Tipis tapi sangat menyerap, lembut di kulit bayi, anti iritasi.",specs:[["Ukuran","S/M/L/XL/XXL"],["Isi","46 pcs"],["Bahan","Bebas fluoresen"],["Sertifikasi","SNI"]]},
-  {id:"resistance-band-set",name:"Resistance Band Set 5 Level Viral",cat:"olahraga",viral:true,price:"Rp39.000",ori:"Rp129.000",disc:"-70%",terjual:"15rb+",foto:"",icon:"🏋️",shopee:"GANTI_LINK_7",desc:"Set resistance band 5 level untuk latihan di rumah. Viral di Instagram karena efektif untuk pembentukan tubuh tanpa gym.",specs:[["Level","5 tingkat"],["Material","Natural latex"],["Max Load","150kg"],["Garansi","3 bulan"]]},
-  {id:"car-holder-viral",name:"Car Phone Holder Magnetic Viral",cat:"otomotif",viral:true,price:"Rp35.000",ori:"Rp120.000",disc:"-71%",terjual:"20rb+",foto:"",icon:"🚗",shopee:"GANTI_LINK_8",desc:"Car phone holder magnetic yang viral. Magnet super kuat, 360° rotation, compatible semua HP, mudah dipasang.",specs:[["Magnet","N52 neodymium"],["Rotasi","360°"],["Kompatibel","Semua HP"],["Garansi","6 bulan"]]},
-  {id:"celana-cargo-viral",name:"Celana Cargo Pria Viral StreetWear",cat:"fashion",viral:true,price:"Rp99.000",ori:"Rp280.000",disc:"-65%",terjual:"9rb+",foto:"",icon:"👗",shopee:"GANTI_LINK_9",desc:"Celana cargo streetwear yang viral di media sosial. Banyak kantong, bahan tebal, cocok untuk hangout dan kegiatan outdoor.",specs:[["Bahan","Japanese drill"],["Ukuran","28-36"],["Warna","6 pilihan"],["Berat","450gr"]]},
-  {id:"rak-dapur-viral",name:"Rak Dapur Stainless 3 Susun Viral",cat:"rumah",viral:false,price:"Rp115.000",ori:"Rp299.000",disc:"-62%",terjual:"6rb+",foto:"",icon:"🏠",shopee:"GANTI_LINK_10",desc:"Rak dapur stainless 3 susun yang viral di TikTok. Anti karat, kuat, mudah dipasang tanpa bor, cocok untuk dapur kecil.",specs:[["Material","Stainless 304"],["Ukuran","60×30×90cm"],["Beban Max","30kg/susun"],["Garansi","1 tahun"]]},
-  {id:"powerbank-20000",name:"Powerbank 20000mAh Fast Charge 65W",cat:"elektronik",viral:true,price:"Rp129.000",ori:"Rp450.000",disc:"-71%",terjual:"18rb+",foto:"",icon:"📱",shopee:"GANTI_LINK_11",desc:"Powerbank 20000mAh dengan fast charge 65W. Isi penuh HP dalam 30 menit, bisa charge laptop, ada display digital.",specs:[["Kapasitas","20000mAh"],["Fast Charge","65W PD"],["Output","USB-A + USB-C"],["Garansi","1 tahun"]]},
-  {id:"sunscreen-viral",name:"Sunscreen SPF50 PA++++ Viral 2025",cat:"kecantikan",viral:true,price:"Rp49.000",ori:"Rp145.000",disc:"-66%",terjual:"40rb+",foto:"",icon:"💄",shopee:"GANTI_LINK_12",desc:"Sunscreen SPF50 PA++++ yang paling viral tahun ini. Tidak lengket, tidak white cast, cocok untuk kulit berminyak.",specs:[["SPF","50 PA++++"],["Volume","50ml"],["Tekstur","Lightweight gel"],["BPOM","Terdaftar"]]},
-  {id:"kopi-cold-brew",name:"Kopi Arabika Cold Brew Ready Drink",cat:"makanan",viral:true,price:"Rp18.000",ori:"Rp35.000",disc:"-49%",terjual:"50rb+",foto:"",icon:"🍜",shopee:"GANTI_LINK_13",desc:"Cold brew kopi arabika siap minum yang viral. Rasa tidak asam, kadar kafein pas, bisa diminum tanpa tambahan gula.",specs:[["Volume","250ml"],["Kafein","120mg"],["Kalori","15kkal"],["Expired","3 bulan"]]},
-  {id:"mainan-montessori",name:"Mainan Kayu Montessori Set Viral",cat:"bayi",viral:true,price:"Rp75.000",ori:"Rp220.000",disc:"-66%",terjual:"11rb+",foto:"",icon:"🍼",shopee:"GANTI_LINK_14",desc:"Set mainan kayu Montessori yang viral untuk stimulasi tumbuh kembang anak 1-3 tahun. Aman, bebas BPA, edukatif.",specs:[["Usia","1-3 tahun"],["Material","Kayu pinus"],["Set","12 pcs"],["Sertifikasi","SNI Toys"]]},
-  {id:"yoga-mat-8mm",name:"Yoga Mat 8mm Anti Slip Viral",cat:"olahraga",viral:false,price:"Rp89.000",ori:"Rp250.000",disc:"-64%",terjual:"14rb+",foto:"",icon:"🏋️",shopee:"GANTI_LINK_15",desc:"Yoga mat tebal 8mm dengan permukaan anti slip. Viral karena kualitas premium dengan harga yang sangat terjangkau.",specs:[["Tebal","8mm"],["Ukuran","183×61cm"],["Material","TPE ramah lingkungan"],["Berat","1.1kg"]]},
-  {id:"dashcam-wifi-4k",name:"Dashcam WiFi 4K Night Vision Viral",cat:"otomotif",viral:true,price:"Rp189.000",ori:"Rp599.000",disc:"-68%",terjual:"8rb+",foto:"",icon:"🚗",shopee:"GANTI_LINK_16",desc:"Dashcam WiFi 4K dengan night vision yang viral. Rekam otomatis, koneksi ke HP via WiFi, parking mode aktif.",specs:[["Resolusi","4K 30fps"],["WiFi","Real-time connect"],["Night Vision","Sony IMX sensor"],["Garansi","1 tahun"]]},
-  {id:"tas-mini-crossbody",name:"Tas Mini Crossbody Kulit Viral",cat:"fashion",viral:true,price:"Rp75.000",ori:"Rp225.000",disc:"-67%",terjual:"22rb+",foto:"",icon:"👗",shopee:"GANTI_LINK_17",desc:"Tas mini crossbody bahan kulit PU viral di Instagram. Muat HP, dompet, dan kunci, cocok untuk hangout ringan.",specs:[["Bahan","PU leather"],["Ukuran","20×15×8cm"],["Tali","Adjustable"],["Warna","8 pilihan"]]},
-  {id:"air-fryer-2l",name:"Air Fryer Mini 2L Viral No-Minyak",cat:"rumah",viral:true,price:"Rp219.000",ori:"Rp650.000",disc:"-66%",terjual:"10rb+",foto:"",icon:"🏠",shopee:"GANTI_LINK_18",desc:"Air fryer mini 2L yang viral untuk masak sehat tanpa minyak. Cocok untuk 1-2 orang, hemat listrik, mudah dibersihkan.",specs:[["Kapasitas","2 Liter"],["Watt","1200W"],["Suhu","80-200°C"],["Garansi","1 tahun"]]},
-  {id:"led-strip-rgb",name:"LED Strip RGB WiFi Alexa 5 Meter",cat:"elektronik",viral:true,price:"Rp55.000",ori:"Rp185.000",disc:"-70%",terjual:"35rb+",foto:"",icon:"📱",shopee:"GANTI_LINK_19",desc:"LED strip RGB yang viral untuk dekorasi kamar. Kontrol via HP, kompatibel Alexa & Google Home, 16 juta warna.",specs:[["Panjang","5 meter"],["Kontrol","App + Voice"],["Warna","16 juta RGB"],["Garansi","6 bulan"]]},
-  {id:"serum-vitamin-c",name:"Serum Vitamin C 20% Brightening",cat:"kecantikan",viral:false,price:"Rp69.000",ori:"Rp199.000",disc:"-65%",terjual:"28rb+",foto:"",icon:"💄",shopee:"GANTI_LINK_20",desc:"Serum vitamin C 20% untuk mencerahkan dan meratakan warna kulit. Formula stabil, tidak mengiritasi, cocok pagi hari.",specs:[["Kandungan","Vitamin C 20%"],["Volume","30ml"],["Kulit","Normal-berminyak"],["BPOM","Terdaftar"]]},
-  {id:"snack-seblak-viral",name:"Snack Keripik Seblak Viral 1 Box",cat:"makanan",viral:true,price:"Rp45.000",ori:"Rp85.000",disc:"-47%",terjual:"60rb+",foto:"",icon:"🍜",shopee:"GANTI_LINK_21",desc:"Keripik seblak level pedas yang paling viral bulan ini. Renyah, bumbu otentik, cocok untuk camilan kapan saja.",specs:[["Isi","10 sachet"],["Level","Mild/Hot/Extra Hot"],["Halal","MUI"],["Expired","6 bulan"]]},
-  {id:"stroller-lipat",name:"Stroller Bayi Lipat Ultra Ringan",cat:"bayi",viral:false,price:"Rp399.000",ori:"Rp999.000",disc:"-60%",terjual:"3rb+",foto:"",icon:"🍼",shopee:"GANTI_LINK_22",desc:"Stroller bayi yang bisa dilipat hanya dalam 1 detik. Ultra ringan 5kg, mudah dibawa ke mana-mana, nyaman untuk bayi.",specs:[["Berat","5kg"],["Max Beban","25kg"],["Lipat","One-click fold"],["Garansi","1 tahun"]]},
-  {id:"sepatu-lari-cloudfoam",name:"Sepatu Lari Cloudfoam Ultra Viral",cat:"olahraga",viral:true,price:"Rp189.000",ori:"Rp550.000",disc:"-66%",terjual:"16rb+",foto:"",icon:"🏋️",shopee:"GANTI_LINK_23",desc:"Sepatu lari dengan sol cloudfoam yang viral karena empuk banget. Ringan, breathable, cocok untuk lari dan olahraga harian.",specs:[["Sole","Cloudfoam"],["Upper","Mesh breathable"],["Ukuran","36-45"],["Berat","250gr"]]},
-  {id:"action-cam-helm",name:"Kamera Helm Motor Action Cam 4K",cat:"otomotif",viral:true,price:"Rp159.000",ori:"Rp480.000",disc:"-67%",terjual:"9rb+",foto:"",icon:"🚗",shopee:"GANTI_LINK_24",desc:"Action cam 4K yang viral untuk biker. Waterproof, anti getar, bisa dipasang di helm atau motor, baterai 90 menit.",specs:[["Resolusi","4K 30fps"],["Waterproof","IPX6"],["Baterai","1200mAh"],["Garansi","6 bulan"]]}
+// LINK 1 — https://s.shopee.co.id/3qK57f2cJD
+{
+  id: "dress-crinkle-1",
+  name: "Dress Busui Babydoll Kancing — Adem & Nyaman — Terlaris",
+  cat: "fashion",
+  viral: true,
+  price: "Rp48.000",       // ← sesuaikan dengan harga aktual
+  ori: "Rp199.000",        // ← sesuaikan dengan harga coret
+  disc: "-57%",
+  terjual: "12rb+",        // ← sesuaikan dengan angka di Shopee
+  foto: "images/JD-dress.jpeg",
+  icon: "👗",
+  shopee: "https://s.shopee.co.id/3qK57f2cJD",
+  desc: "Dress busui friendly model babydoll dengan kancing depan untuk akses menyusui yang mudah. Bahan ringan adem, potongan longgar nyaman dipakai seharian. Cocok untuk ibu menyusui maupun bumil. Tersedia berbagai warna cantik",
+  specs: [
+    ["Model", "Babydoll / A-line"],
+    ["Bukaan", "Kancing depan — busui friendly"],
+    ["Bahan", "Crinkle airflow / katun"],
+    ["Ukuran", "S, M, L, XL, XXL"],
+    ["Panjang", "Midi (±100cm)"],
+    ["Cocok untuk", "Busui, bumil, harian"]
+  ]
+},
+
+// LINK 2 — https://s.shopee.co.id/5VSJ6nyaDV
+{
+  id: "dress-crinkle-2",
+  name: "Dress Midi Busui V-Neck Renda — Elegan & Feminin — Best Seller",
+  cat: "fashion",
+  viral: true,
+  price: "Rp36.767",       // ← sesuaikan
+  ori: "Rp185.000",        // ← sesuaikan
+  disc: "-57%",
+  terjual: "8rb+",         // ← sesuaikan
+  foto: "images/dv-dress.jpeg",
+  icon: "👗",
+  shopee: "https://s.shopee.co.id/5VSJ6nyaDV",
+  desc: "Dress midi busui friendly dengan detail renda putih cantik di leher V-neck. Ada kantong samping yang praktis. Bahan crinkle airflow adem dan anti kusut. Tampil feminin dan elegan tetap bisa menyusui dengan nyaman.",
+  specs: [
+    ["Model", "Midi V-neck"],
+    ["Detail", "Renda putih di leher & lengan"],
+    ["Kantong", "Ada 2 kantong samping"],
+    ["Bukaan", "V-neck — busui friendly"],
+    ["Bahan", "Crinkle airflow"],
+    ["Ukuran", "S, M, L, XL, XXL"],
+    ["Panjang", "Midi (±110cm)"]
+  ]
+},
+
+// LINK 3 — https://s.shopee.co.id/6feGV1aWUi
+{
+  id: "dress-crinkle-3",
+  name: "Dress Rumahan Daster Natasha Busui Satin — Lembut & Mewah — Edisi Terbaru",
+  cat: "fashion",
+  viral: true,
+  price: "Rp39.000",       // ← sesuaikan
+  ori: "Rp155.000",        // ← sesuaikan
+  disc: "-54%",
+  terjual: "5rb+",         // ← sesuaikan
+  foto: "images/WUI-dress.jpeg",
+  icon: "👗",
+  shopee: "https://s.shopee.co.id/6feGV1aWUi",
+  desc: "Daster Natasha bahan satin premium yang lembut seperti sutra di kulit. Model longgar dengan bukaan kancing tersembunyi untuk menyusui. Nyaman dipakai tidur maupun santai di rumah. Tampilan tetap rapi dan elegan.",
+  specs: [
+    ["Model", "Daster longgar"],
+    ["Bahan", "Satin premium / rayon"],
+    ["Bukaan", "Kancing tersembunyi — busui friendly"],
+    ["Ukuran", "All size (M–XXL)"],
+    ["Panjang", "Midi (±95cm)"],
+    ["Cocok untuk", "Tidur, santai, busui"]
+  ]
+},
+{
+  id: "celana-cargo-viral",
+  name: "Celana Cargo Pria Slim Fit Streetwear — Terlaris",
+  cat: "fashion",
+  viral: true,
+  price: "Rp78.900",       // ← sesuaikan harga aktual di Shopee
+  ori: "Rp280.000",        // ← sesuaikan harga coret
+  disc: "-65%",
+  terjual: "9rb+",         // ← sesuaikan
+  foto: "images/Cargo-fb.jpeg",
+  icon: "👖",
+  shopee: "https://s.shopee.co.id/9Kf1iWS1FB",
+  desc: "Celana cargo pria slim fit dengan potongan tapered yang rapi dan modern. Bahan tebal berkualitas, ada cargo pocket di samping untuk tampilan streetwear yang kece. Cocok untuk hangout, nongkrong, maupun kerja kasual. Tidak mudah kusut dan tahan lama.",
+  specs: [
+    ["Model", "Slim fit / tapered"],
+    ["Kantong", "6 kantong termasuk cargo pocket"],
+    ["Bahan", "Drill / twill premium"],
+    ["Ukuran", "28, 29, 30, 31, 32, 33, 34, 36"],
+    ["Warna", "Hitam, Army, Abu — cek di Shopee"],
+    ["Cocok untuk", "Hangout, kerja kasual, outdoor"]
+  ]
+},
+{
+  id: "tas-mini-crossbody",
+  name: "Tas Mini Crossbody LATMAP — Elegan & Premium",
+  cat: "fashion",
+  viral: true,
+  price: "Rp86.799",
+  ori: "Rp199.000",        // ← sesuaikan harga coret di Shopee
+  disc: "-56%",            // ← sesuaikan
+  terjual: "22rb+",        // ← sesuaikan
+  foto: "images/r7-tasmini.jpeg",
+  icon: "👜",
+  shopee: "https://s.shopee.co.id/4VZlyOIUr7",
+  desc: "Tas mini crossbody LATMAP EST.1998 dengan kombinasi bahan kanvas tekstur premium dan aksen kulit coklat di bagian flap. Gesper emas elegan, tali panjang adjustable, muat HP, dompet, dan kunci. Desain minimalis mewah cocok untuk hangout, kerja, maupun acara formal.",
+  specs: [
+    ["Brand", "LATMAP EST.1998"],
+    ["Model", "Mini crossbody / sling bag"],
+    ["Bahan", "Kanvas tekstur + kulit sintetis"],
+    ["Gesper", "Magnet + gesper emas"],
+    ["Tali", "Panjang adjustable"],
+    ["Ukuran", "±18×13×6 cm"],
+    ["Warna", "Cream/Coklat — cek warna lain di Shopee"]
+  ]
+},
+{
+  id: "vacuum-cleaner-mini",
+  name: "Vacuum Cleaner MAIMEITE 2-in-1 Stick & Handheld 20000Pa",
+  cat: "rumah",
+  viral: true,
+  price: "Rp135.000",
+  ori: "Rp350.000",        // ← sesuaikan harga coret di Shopee
+  disc: "-61%",            // ← sesuaikan
+  terjual: "8rb+",         // ← sesuaikan
+  foto: "images/vacuum-maimeite.jpeg",
+  icon: "🏠",
+  shopee: "https://s.shopee.co.id/1LckD3iy9y",
+  desc: "Vacuum cleaner MAIMEITE 2-in-1 bisa dipakai sebagai stick vacuum maupun handheld. Daya hisap super kuat 20000Pa — efektif menyedot debu, membasmi tungau kasur, dan menghilangkan bulu hewan peliharaan. Dilengkapi berbagai attachment untuk semua sudut rumah.",
+  specs: [
+    ["Brand", "MAIMEITE"],
+    ["Model", "2-in-1 Stick + Handheld"],
+    ["Daya Hisap", "20000Pa"],
+    ["Fungsi", "Debu, tungau, bulu hewan"],
+    ["Attachment", "Sikat tungau, sikat debu, nozzle celah, pipa ekstensi"],
+    ["Warna", "Putih + Orange"],
+    ["Garansi", "Cek di Shopee"]
+  ]
+},
+{
+  id: "air-fryer-2l",
+  name: "Air Fryer Gaabor 2L Minimalis — Garansi Resmi 2 Tahun",
+  cat: "rumah",
+  viral: true,
+  price: "Rp268.830",
+  ori: "Rp650.000",        // ← sesuaikan harga coret di Shopee
+  disc: "-59%",            // ← sesuaikan
+  terjual: "10rb+",        // ← sesuaikan
+  foto: "images/airfryer-gaabor.jpeg",
+  icon: "🏠",
+  shopee: "https://s.shopee.co.id/9fHs8wOgEz",
+  desc: "Air fryer Gaabor 2 liter desain minimalis kekinian warna cream. Masak sehat tanpa minyak dengan teknologi panas cepat & merata. Dilengkapi proteksi auto shut-off untuk keamanan. Garansi resmi 2 tahun dari Gaabor Official Shop. Cocok untuk 1–2 orang.",
+  specs: [
+    ["Brand", "Gaabor Official"],
+    ["Kapasitas", "2 Liter"],
+    ["Teknologi", "Panas cepat & merata"],
+    ["Proteksi", "Auto Shut-Off"],
+    ["Garansi", "2 Tahun resmi"],
+    ["Cicilan", "0% SPayLater"],
+    ["Warna", "Cream / Beige minimalis"],
+    ["Cocok untuk", "1–2 orang, dapur kecil"]
+  ]
+},
+{
+  id: "rak-dapur-viral",
+  name: "Rak Dapur Over Sink LAZZEN 2 Susun — Anti Karat & COD",
+  cat: "rumah",
+  viral: false,
+  price: "Rp179.900",
+  ori: "Rp350.000",        // ← sesuaikan harga coret di Shopee
+  disc: "-49%",            // ← sesuaikan
+  terjual: "6rb+",         // ← sesuaikan
+  foto: "images/rak-lazzen.jpeg",
+  icon: "🏠",
+  shopee: "https://s.shopee.co.id/AUqz8ttLVr",
+  desc: "Rak dapur LAZZEN model over sink 2 susun yang viral di TikTok. Dipasang di atas wastafel untuk memaksimalkan ruang dapur. Bahan besi hitam anti karat, kuat menahan beban berat. Lengkap dengan tempat piring, gelas, sendok, bumbu, talenan, dan gantungan peralatan. Support COD & pengiriman 24 jam.",
+  specs: [
+    ["Brand", "LAZZEN"],
+    ["Model", "Over sink / di atas wastafel"],
+    ["Susun", "2 tingkat"],
+    ["Material", "Besi carbon anti karat"],
+    ["Warna", "Hitam"],
+    ["Kelengkapan", "Tempat piring, gelas, sendok, gantungan"],
+    ["Pengiriman", "24 jam + support COD"],
+    ["Ukuran", "Cek di Shopee (beberapa ukuran)"]
+  ]
+},
+{
+  id: "earphone-tws-viral",
+  name: "TWS Earphone Sport Lenovo — Anti Jatuh & Nyaman Olahraga",
+  cat: "elektronik",
+  viral: true,
+  price: "Rp143.900",
+  ori: "Rp350.000",        // ← sesuaikan harga coret di Shopee
+  disc: "-59%",            // ← sesuaikan
+  terjual: "25rb+",        // ← sesuaikan
+  foto: "images/tws-lenovo.jpeg",
+  icon: "📱",
+  shopee: "https://s.shopee.co.id/5q59asGYcv",
+  desc: "TWS earphone sport Lenovo dengan desain ergonomis earhook yang tidak akan jatuh saat berlari, melompat, atau olahraga intens. Tidak ada rasa sakit meski dipakai berjam-jam. Pas di telinga, nyaman sepanjang hari. Cocok untuk gym, lari, bersepeda, dan aktivitas outdoor.",
+  specs: [
+    ["Brand", "Lenovo"],
+    ["Model", "Open-ear / earhook sport"],
+    ["Koneksi", "Bluetooth wireless"],
+    ["Desain", "Ergonomis anti jatuh"],
+    ["Cocok untuk", "Olahraga, gym, lari, outdoor"],
+    ["Warna", "Hitam — cek warna lain di Shopee"],
+    ["Garansi", "Cek di Shopee"]
+  ]
+},
+{
+  id: "powerbank-20000",
+  name: "Powerbank Baseus Lipow 22.5W — Kabel Bawaan & Garansi 2 Tahun",
+  cat: "elektronik",
+  viral: true,
+  price: "Rp233.160",
+  ori: "Rp550.000",        // ← sesuaikan harga coret di Shopee
+  disc: "-58%",            // ← sesuaikan
+  terjual: "18rb+",        // ← sesuaikan
+  foto: "images/powerbank-baseus.jpeg",
+  icon: "📱",
+  shopee: "https://s.shopee.co.id/3B4OQe46eW",
+  desc: "Powerbank Baseus Lipow resmi dengan kabel bawaan dual Type-C dan Lightning — tidak perlu bawa kabel terpisah! Fast charging 22.5W isi HP super cepat. Display digital menampilkan sisa daya akurat. Tersedia kapasitas 10.000mAh dan 20.000mAh. Garansi resmi 2 tahun dari Baseus Official Shop.",
+  specs: [
+    ["Brand", "Baseus Official Shop"],
+    ["Seri", "Lipow"],
+    ["Kapasitas", "10.000mAh / 20.000mAh"],
+    ["Fast Charging", "22.5W"],
+    ["Kabel Bawaan", "Type-C + Lightning (dual cable)"],
+    ["Display", "Digital indicator daya"],
+    ["Garansi", "2 Tahun resmi"],
+    ["Warna", "Putih"]
+  ]
+},
+{
+  id: "led-strip-rgb",
+  name: "LED Strip Running RGB Galaxy — Neon Flex + App & Remote",
+  cat: "elektronik",
+  viral: true,
+  price: "Rp73.349",
+  ori: "Rp185.000",        // ← sesuaikan harga coret di Shopee
+  disc: "-60%",            // ← sesuaikan
+  terjual: "35rb+",        // ← sesuaikan
+  foto: "images/led-strip-galaxy.jpeg",
+  icon: "📱",
+  shopee: "https://s.shopee.co.id/5VSJDliXK7",
+  desc: "LED strip neon flex Running RGB dari Galaxy LED Mall dengan efek cahaya mengalir yang aesthetic banget! Kontrol warna & mode via aplikasi HP (Bluetooth) atau remote 24 tombol. Gratis adaptor, langsung pasang. Tersedia panjang 2, 3, dan 5 meter. Wajib punya untuk dekorasi kamar gaming, aesthetic, atau ruang keluarga.",
+  specs: [
+    ["Brand", "Galaxy LED Mall"],
+    ["Tipe", "Neon flex running RGB"],
+    ["Panjang", "2 meter / 3 meter / 5 meter"],
+    ["Kontrol", "App Bluetooth + Remote 24 tombol"],
+    ["Bonus", "Gratis adaptor"],
+    ["Efek", "Running, strobo, solid, musik sync"],
+    ["Daya", "USB / adaptor"],
+    ["Cocok untuk", "Kamar, gaming room, ruang tamu"]
+  ]
+},
+{
+  id: "facial-wash-hiserha",
+  name: "HisErha Gentle Acne Facial Wash Pria — 7 Hari Jerawat Berkurang",
+  cat: "kecantikan",
+  viral: true,
+  price: "Rp45.500",
+  ori: "Rp89.000",         // ← sesuaikan harga coret di Shopee
+  disc: "-49%",            // ← sesuaikan
+  terjual: "30rb+",        // ← sesuaikan
+  foto: "images/facial-wash-hiserha.jpeg",
+  icon: "💄",
+  shopee: "https://s.shopee.co.id/3VhEqRqXoV",
+  desc: "Sabun muka pria HisErha dari Erha Store dengan formula Triple Acne Fighter — terbukti kurangi jerawat dalam 7 hari! Mengandung Zinc PCA, Salicylic Acid, dan Gentle Scrub untuk basmi jerawat hingga ke akar. Diformulasi dermatologis, tanpa rasa ketarik, 2x moisturizing agent. Wangi segar maskulin. Produk Erha original.",
+  specs: [
+    ["Brand", "HisErha by Erha Store"],
+    ["Jenis", "Facial wash pria anti jerawat"],
+    ["Kandungan", "Zinc PCA + Salicylic Acid + Gentle Scrub"],
+    ["Keunggulan", "7 hari jerawat berkurang"],
+    ["Formula", "Dermatologist formulated"],
+    ["Efek", "Tanpa rasa ketarik, 2x moisturizing"],
+    ["Wangi", "Segar maskulin"],
+    ["BPOM", "Produk Erha Original"]
+  ]
+},
+{
+  id: "facial-wash-kahf",
+  name: "Kahf Bright Revitalizing AminoGel Face Wash — Brightening Low pH",
+  cat: "kecantikan",
+  viral: true,
+  price: "Rp35.000",
+  ori: "Rp75.000",         // ← sesuaikan harga coret di Shopee
+  disc: "-53%",            // ← sesuaikan
+  terjual: "40rb+",        // ← sesuaikan
+  foto: "images/facial-wash-kahf.jpeg",
+  icon: "💄",
+  shopee: "https://s.shopee.co.id/3qK5FDbxGi",
+  desc: "Sabun muka pria Kahf Bright Revitalizing AminoGel dengan formula Gentle Low pH yang aman untuk semua jenis kulit termasuk kulit sensitif. Mengandung 15x Amino Acid untuk kelembaban maksimal, Vitamin C untuk mencerahkan, Gluconolactone & Panthenol untuk menutrisi kulit. Dermatologically tested dari Kahf Official Store.",
+  specs: [
+    ["Brand", "Kahf Official Store"],
+    ["Seri", "Bright Revitalizing AminoGel"],
+    ["pH", "Low pH 5.5 — gentle di kulit"],
+    ["Kandungan", "15x Amino Acid, Vitamin C, Gluconolactone, Panthenol"],
+    ["Kulit", "Semua jenis kulit + sensitif"],
+    ["Uji", "Dermatologically tested"],
+    ["Volume", "100ml"],
+    ["Fungsi", "Brightening + moisturizing"]
+  ]
+},
+{
+  id: "moisturizer-glad2glow",
+  name: "Glad2Glow Brightening Moisturizer — 14 Hari Cerah & Lembap",
+  cat: "kecantikan",
+  viral: true,
+  price: "Rp35.120",
+  ori: "Rp79.000",         // ← sesuaikan harga coret di Shopee
+  disc: "-56%",            // ← sesuaikan
+  terjual: "50rb+",        // ← sesuaikan
+  foto: "images/moisturizer-glad2glow.jpeg",
+  icon: "💄",
+  shopee: "https://s.shopee.co.id/8V5uoIpnlY",
+  desc: "Pelembap wajah Glad2Glow Brightening Moisturizer terbukti bikin kulit cerah alami dan lembap hanya dalam 14 hari! Mengandung Pomegranate & Niacinamide untuk mencerahkan dan meratakan warna kulit. Tekstur lembut, cepat meresap, tidak lengket. Cocok untuk semua jenis kulit wanita.",
+  specs: [
+    ["Brand", "Glad2Glow"],
+    ["Seri", "Brightening Moisturizer"],
+    ["Kandungan", "Pomegranate + Niacinamide"],
+    ["Hasil", "14 hari cerah & lembap"],
+    ["Tekstur", "Cream lembut, cepat meresap"],
+    ["Berat", "30g / 1 FL.OZ"],
+    ["Kulit", "Semua jenis kulit"],
+    ["BPOM", "Terdaftar"]
+  ]
+},
+{
+  id: "micellar-glad2glow",
+  name: "Glad2Glow Micellar Water No.1 — Hapus Makeup 1x Swipe",
+  cat: "kecantikan",
+  viral: true,
+  price: "Rp38.120",
+  ori: "Rp85.000",         // ← sesuaikan harga coret di Shopee
+  disc: "-55%",            // ← sesuaikan
+  terjual: "60rb+",        // ← sesuaikan
+  foto: "images/micellar-glad2glow.jpeg",
+  icon: "💄",
+  shopee: "https://s.shopee.co.id/7AaXE9IP8u",
+  desc: "Micellar water No.1 terlaris dari Glad2Glow Official! Bersihkan makeup waterproof hanya dengan 1x swipe tanpa perlu dibilas. No iritasi, kulit tetap lembap setelah membersihkan makeup. Cocok untuk semua jenis kulit termasuk kulit sensitif dan berhijab.",
+  specs: [
+    ["Brand", "Glad2Glow Official"],
+    ["Jenis", "Micellar water"],
+    ["Keunggulan", "Hapus makeup waterproof 1x swipe"],
+    ["Efek", "No iritasi, kulit lembap"],
+    ["Peringkat", "No.1 Micellar Water G2G"],
+    ["Kulit", "Semua jenis kulit + sensitif"],
+    ["Cara pakai", "Tuang ke kapas, usap wajah"],
+    ["BPOM", "Terdaftar"]
+  ]
+},
+{
+  id: "kopi-arabica-harvestside",
+  name: "Harvestside Arabica Instant Coffee 100g — Murni Tanpa Ampas",
+  cat: "makanan",
+  viral: true,
+  price: "Rp60.070",
+  ori: "Rp120.000",        // ← sesuaikan harga coret di Shopee
+  disc: "-50%",            // ← sesuaikan
+  terjual: "10rb+",        // ← sesuaikan
+  foto: "images/kopi-harvestside.jpeg",
+  icon: "🍜",
+  shopee: "https://s.shopee.co.id/9pbIPXxJND",
+  desc: "Kopi instan murni 100% Arabica dari Harvestside — tanpa ampas, krema tebal, aroma wangi, larut sempurna dengan air panas maupun dingin. Cocok untuk americano, kopi susu gula aren, cold brew, dan berbagai kreasi minuman kopi. Bonus: 5% profit didonasikan untuk Palestina.",
+  specs: [
+    ["Brand", "Harvestside"],
+    ["Jenis", "Arabica instant coffee murni"],
+    ["Berat", "100g"],
+    ["Bahan", "100% Arabica — tanpa campuran"],
+    ["Keunggulan", "Tanpa ampas, krema tebal"],
+    ["Larut", "Air panas & air dingin"],
+    ["Cocok untuk", "Americano, kopi susu, cold brew"],
+    ["Donasi", "5% profit untuk Palestina"]
+  ]
+},
+{
+  id: "snack-seblak-viral",
+  name: "Snack Seblak Campur Viral — Kerupuk Mix Pedas Nampol 500g",
+  cat: "makanan",
+  viral: true,
+  price: "Rp21.500",
+  ori: "Rp45.000",         // ← sesuaikan harga coret di Shopee
+  disc: "-52%",            // ← sesuaikan
+  terjual: "60rb+",        // ← sesuaikan
+  foto: "images/snack-seblak.jpeg",
+  icon: "🍜",
+  shopee: "https://s.shopee.co.id/5L8t3d19k0",
+  desc: "Snack seblak campur yang lagi viral banget di medsos! Isi campuran kerupuk ceker, makaroni, bawang, dan aneka kerupuk pilihan berbumbu seblak pedas nampol. Porsi banyak, harga murah meriah. Cocok untuk camilan santai, nonton film, atau teman begadang.",
+  specs: [
+    ["Jenis", "Kerupuk mix bumbu seblak"],
+    ["Isi", "Campuran kerupuk ceker, makaroni, bawang, dll"],
+    ["Level", "Pedas — tersedia beberapa level"],
+    ["Berat", "±500g"],
+    ["Halal", "MUI"],
+    ["Cocok untuk", "Camilan, nonton, kumpul keluarga"],
+    ["Penyimpanan", "Simpan di tempat kering & sejuk"]
+  ]
+},
+{
+  id: "resistance-band-set",
+  name: "Resistance Loop Band Trailtop — Full Body Workout 4 Level",
+  cat: "olahraga",
+  viral: true,
+  price: "Rp21.500",
+  ori: "Rp65.000",         // ← sesuaikan harga coret di Shopee
+  disc: "-67%",            // ← sesuaikan
+  terjual: "15rb+",        // ← sesuaikan
+  foto: "images/resistance-band-trailtop.jpeg",
+  icon: "🏋️",
+  shopee: "https://s.shopee.co.id/6feGeLj1fn",
+  desc: "Resistance loop band Trailtop Official untuk full body workout di rumah tanpa perlu gym. Target semua otot tubuh — lengan, kaki, bokong, dan punggung. Tersedia 4 level resistensi berbeda warna. Bahan latex premium tebal, tidak mudah putus. Ringan dan mudah dibawa ke mana saja.",
+  specs: [
+    ["Brand", "Trailtop Official Shop"],
+    ["Jenis", "Resistance loop band panjang"],
+    ["Level", "4 tingkat (merah, hitam, ungu, hijau)"],
+    ["Material", "Natural latex premium"],
+    ["Fungsi", "Full body workout, target muscles"],
+    ["Cocok untuk", "Gym, rumah, outdoor"],
+    ["Portabilitas", "Ringan, mudah dibawa"],
+    ["Isi", "1 pcs per pembelian"]
+  ]
+},
+  // {id:"vacuum-cleaner-mini",name:"Vacuum Cleaner Mini Wireless Viral",cat:"rumah",viral:true,price:"Rp79.000",ori:"Rp259.000",disc:"-70%",terjual:"8rb+",foto:"",icon:"🏠",shopee:"GANTI_LINK_2",desc:"Vacuum cleaner mini wireless yang lagi viral. Mudah dibawa, baterai tahan lama, cocok untuk bersihin sofa, meja, dan mobil.",specs:[["Daya hisap","8000Pa"],["Baterai","2000mAh"],["Berat","450gr"],["Garansi","6 bulan"]]},
+  // {id:"earphone-tws-viral",name:"TWS Earphone Bluetooth 5.3 Bass",cat:"elektronik",viral:true,price:"Rp45.000",ori:"Rp189.000",disc:"-76%",terjual:"25rb+",foto:"",icon:"📱",shopee:"GANTI_LINK_3",desc:"TWS earphone dengan Bluetooth 5.3 terbaru. Bass jernih, latency rendah, cocok gaming maupun dengerin musik.",specs:[["Bluetooth","5.3"],["Battery","300mAh case"],["Latency","<60ms"],["Garansi","3 bulan"]]},
+  // {id:"mie-instant-viral",name:"Mie Instan Kuah Kari Viral 1 Dus",cat:"makanan",viral:false,price:"Rp62.000",ori:"Rp95.000",disc:"-35%",terjual:"5rb+",foto:"",icon:"🍜",shopee:"GANTI_LINK_5",desc:"Mie instan kuah kari yang lagi hits di medsos. Rasa autentik, porsi kenyang, cocok untuk makan siang atau malam.",specs:[["Isi","10 bungkus"],["Berat","850gr"],["Expired","12 bulan"],["Halal","MUI"]]},
+  // {id:"pampers-bayi-viral",name:"Pampers Bayi Ultra Thin Dry",cat:"bayi",viral:true,price:"Rp89.000",ori:"Rp149.000",disc:"-40%",terjual:"7rb+",foto:"",icon:"🍼",shopee:"GANTI_LINK_6",desc:"Pampers ultra thin dengan teknologi dry surface. Tipis tapi sangat menyerap, lembut di kulit bayi, anti iritasi.",specs:[["Ukuran","S/M/L/XL/XXL"],["Isi","46 pcs"],["Bahan","Bebas fluoresen"],["Sertifikasi","SNI"]]},
+  // {id:"resistance-band-set",name:"Resistance Band Set 5 Level Viral",cat:"olahraga",viral:true,price:"Rp39.000",ori:"Rp129.000",disc:"-70%",terjual:"15rb+",foto:"",icon:"🏋️",shopee:"GANTI_LINK_7",desc:"Set resistance band 5 level untuk latihan di rumah. Viral di Instagram karena efektif untuk pembentukan tubuh tanpa gym.",specs:[["Level","5 tingkat"],["Material","Natural latex"],["Max Load","150kg"],["Garansi","3 bulan"]]},
+  // {id:"car-holder-viral",name:"Car Phone Holder Magnetic Viral",cat:"otomotif",viral:true,price:"Rp35.000",ori:"Rp120.000",disc:"-71%",terjual:"20rb+",foto:"",icon:"🚗",shopee:"GANTI_LINK_8",desc:"Car phone holder magnetic yang viral. Magnet super kuat, 360° rotation, compatible semua HP, mudah dipasang.",specs:[["Magnet","N52 neodymium"],["Rotasi","360°"],["Kompatibel","Semua HP"],["Garansi","6 bulan"]]},
+  // {id:"celana-cargo-viral",name:"Celana Cargo Pria Viral StreetWear",cat:"fashion",viral:true,price:"Rp99.000",ori:"Rp280.000",disc:"-65%",terjual:"9rb+",foto:"",icon:"👗",shopee:"GANTI_LINK_9",desc:"Celana cargo streetwear yang viral di media sosial. Banyak kantong, bahan tebal, cocok untuk hangout dan kegiatan outdoor.",specs:[["Bahan","Japanese drill"],["Ukuran","28-36"],["Warna","6 pilihan"],["Berat","450gr"]]},
+  // {id:"rak-dapur-viral",name:"Rak Dapur Stainless 3 Susun Viral",cat:"rumah",viral:false,price:"Rp115.000",ori:"Rp299.000",disc:"-62%",terjual:"6rb+",foto:"",icon:"🏠",shopee:"GANTI_LINK_10",desc:"Rak dapur stainless 3 susun yang viral di TikTok. Anti karat, kuat, mudah dipasang tanpa bor, cocok untuk dapur kecil.",specs:[["Material","Stainless 304"],["Ukuran","60×30×90cm"],["Beban Max","30kg/susun"],["Garansi","1 tahun"]]},
+  // {id:"powerbank-20000",name:"Powerbank 20000mAh Fast Charge 65W",cat:"elektronik",viral:true,price:"Rp129.000",ori:"Rp450.000",disc:"-71%",terjual:"18rb+",foto:"",icon:"📱",shopee:"GANTI_LINK_11",desc:"Powerbank 20000mAh dengan fast charge 65W. Isi penuh HP dalam 30 menit, bisa charge laptop, ada display digital.",specs:[["Kapasitas","20000mAh"],["Fast Charge","65W PD"],["Output","USB-A + USB-C"],["Garansi","1 tahun"]]},
+  // {id:"sunscreen-viral",name:"Sunscreen SPF50 PA++++ Viral 2025",cat:"kecantikan",viral:true,price:"Rp49.000",ori:"Rp145.000",disc:"-66%",terjual:"40rb+",foto:"",icon:"💄",shopee:"GANTI_LINK_12",desc:"Sunscreen SPF50 PA++++ yang paling viral tahun ini. Tidak lengket, tidak white cast, cocok untuk kulit berminyak.",specs:[["SPF","50 PA++++"],["Volume","50ml"],["Tekstur","Lightweight gel"],["BPOM","Terdaftar"]]},
+  // {id:"kopi-cold-brew",name:"Kopi Arabika Cold Brew Ready Drink",cat:"makanan",viral:true,price:"Rp18.000",ori:"Rp35.000",disc:"-49%",terjual:"50rb+",foto:"",icon:"🍜",shopee:"GANTI_LINK_13",desc:"Cold brew kopi arabika siap minum yang viral. Rasa tidak asam, kadar kafein pas, bisa diminum tanpa tambahan gula.",specs:[["Volume","250ml"],["Kafein","120mg"],["Kalori","15kkal"],["Expired","3 bulan"]]},
+  // {id:"mainan-montessori",name:"Mainan Kayu Montessori Set Viral",cat:"bayi",viral:true,price:"Rp75.000",ori:"Rp220.000",disc:"-66%",terjual:"11rb+",foto:"",icon:"🍼",shopee:"GANTI_LINK_14",desc:"Set mainan kayu Montessori yang viral untuk stimulasi tumbuh kembang anak 1-3 tahun. Aman, bebas BPA, edukatif.",specs:[["Usia","1-3 tahun"],["Material","Kayu pinus"],["Set","12 pcs"],["Sertifikasi","SNI Toys"]]},
+  // {id:"yoga-mat-8mm",name:"Yoga Mat 8mm Anti Slip Viral",cat:"olahraga",viral:false,price:"Rp89.000",ori:"Rp250.000",disc:"-64%",terjual:"14rb+",foto:"",icon:"🏋️",shopee:"GANTI_LINK_15",desc:"Yoga mat tebal 8mm dengan permukaan anti slip. Viral karena kualitas premium dengan harga yang sangat terjangkau.",specs:[["Tebal","8mm"],["Ukuran","183×61cm"],["Material","TPE ramah lingkungan"],["Berat","1.1kg"]]},
+  // {id:"dashcam-wifi-4k",name:"Dashcam WiFi 4K Night Vision Viral",cat:"otomotif",viral:true,price:"Rp189.000",ori:"Rp599.000",disc:"-68%",terjual:"8rb+",foto:"",icon:"🚗",shopee:"GANTI_LINK_16",desc:"Dashcam WiFi 4K dengan night vision yang viral. Rekam otomatis, koneksi ke HP via WiFi, parking mode aktif.",specs:[["Resolusi","4K 30fps"],["WiFi","Real-time connect"],["Night Vision","Sony IMX sensor"],["Garansi","1 tahun"]]},
+  // {id:"tas-mini-crossbody",name:"Tas Mini Crossbody Kulit Viral",cat:"fashion",viral:true,price:"Rp75.000",ori:"Rp225.000",disc:"-67%",terjual:"22rb+",foto:"",icon:"👗",shopee:"GANTI_LINK_17",desc:"Tas mini crossbody bahan kulit PU viral di Instagram. Muat HP, dompet, dan kunci, cocok untuk hangout ringan.",specs:[["Bahan","PU leather"],["Ukuran","20×15×8cm"],["Tali","Adjustable"],["Warna","8 pilihan"]]},
+  // {id:"air-fryer-2l",name:"Air Fryer Mini 2L Viral No-Minyak",cat:"rumah",viral:true,price:"Rp219.000",ori:"Rp650.000",disc:"-66%",terjual:"10rb+",foto:"",icon:"🏠",shopee:"GANTI_LINK_18",desc:"Air fryer mini 2L yang viral untuk masak sehat tanpa minyak. Cocok untuk 1-2 orang, hemat listrik, mudah dibersihkan.",specs:[["Kapasitas","2 Liter"],["Watt","1200W"],["Suhu","80-200°C"],["Garansi","1 tahun"]]},
+  // {id:"led-strip-rgb",name:"LED Strip RGB WiFi Alexa 5 Meter",cat:"elektronik",viral:true,price:"Rp55.000",ori:"Rp185.000",disc:"-70%",terjual:"35rb+",foto:"",icon:"📱",shopee:"GANTI_LINK_19",desc:"LED strip RGB yang viral untuk dekorasi kamar. Kontrol via HP, kompatibel Alexa & Google Home, 16 juta warna.",specs:[["Panjang","5 meter"],["Kontrol","App + Voice"],["Warna","16 juta RGB"],["Garansi","6 bulan"]]},
+  // {id:"serum-vitamin-c",name:"Serum Vitamin C 20% Brightening",cat:"kecantikan",viral:false,price:"Rp69.000",ori:"Rp199.000",disc:"-65%",terjual:"28rb+",foto:"",icon:"💄",shopee:"GANTI_LINK_20",desc:"Serum vitamin C 20% untuk mencerahkan dan meratakan warna kulit. Formula stabil, tidak mengiritasi, cocok pagi hari.",specs:[["Kandungan","Vitamin C 20%"],["Volume","30ml"],["Kulit","Normal-berminyak"],["BPOM","Terdaftar"]]},
+  // {id:"snack-seblak-viral",name:"Snack Keripik Seblak Viral 1 Box",cat:"makanan",viral:true,price:"Rp45.000",ori:"Rp85.000",disc:"-47%",terjual:"60rb+",foto:"",icon:"🍜",shopee:"GANTI_LINK_21",desc:"Keripik seblak level pedas yang paling viral bulan ini. Renyah, bumbu otentik, cocok untuk camilan kapan saja.",specs:[["Isi","10 sachet"],["Level","Mild/Hot/Extra Hot"],["Halal","MUI"],["Expired","6 bulan"]]},
+  // {id:"stroller-lipat",name:"Stroller Bayi Lipat Ultra Ringan",cat:"bayi",viral:false,price:"Rp399.000",ori:"Rp999.000",disc:"-60%",terjual:"3rb+",foto:"",icon:"🍼",shopee:"GANTI_LINK_22",desc:"Stroller bayi yang bisa dilipat hanya dalam 1 detik. Ultra ringan 5kg, mudah dibawa ke mana-mana, nyaman untuk bayi.",specs:[["Berat","5kg"],["Max Beban","25kg"],["Lipat","One-click fold"],["Garansi","1 tahun"]]},
+  // {id:"sepatu-lari-cloudfoam",name:"Sepatu Lari Cloudfoam Ultra Viral",cat:"olahraga",viral:true,price:"Rp189.000",ori:"Rp550.000",disc:"-66%",terjual:"16rb+",foto:"",icon:"🏋️",shopee:"GANTI_LINK_23",desc:"Sepatu lari dengan sol cloudfoam yang viral karena empuk banget. Ringan, breathable, cocok untuk lari dan olahraga harian.",specs:[["Sole","Cloudfoam"],["Upper","Mesh breathable"],["Ukuran","36-45"],["Berat","250gr"]]},
+  // {id:"action-cam-helm",name:"Kamera Helm Motor Action Cam 4K",cat:"otomotif",viral:true,price:"Rp159.000",ori:"Rp480.000",disc:"-67%",terjual:"9rb+",foto:"",icon:"🚗",shopee:"GANTI_LINK_24",desc:"Action cam 4K yang viral untuk biker. Waterproof, anti getar, bisa dipasang di helm atau motor, baterai 90 menit.",specs:[["Resolusi","4K 30fps"],["Waterproof","IPX6"],["Baterai","1200mAh"],["Garansi","6 bulan"]]}
 ];
 
 /* ═══════════════════════════════════════════
