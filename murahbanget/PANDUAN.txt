@@ -1,0 +1,89 @@
+======================================================
+  MURAHBANGET.ID — PANDUAN EDIT & UPLOAD KE NETLIFY
+======================================================
+
+STRUKTUR FOLDER:
+  murahbanget/
+  ├── index.html        ← file utama website
+  ├── images/           ← simpan semua foto produk di sini
+  │   ├── vacuum-cleaner.jpg
+  │   ├── earphone-tws.jpg
+  │   └── ... (foto produk lainnya)
+  └── PANDUAN.txt       ← file ini
+
+
+------------------------------------------------------
+  CARA 1: GANTI LINK SHOPEE AFFILIATE
+------------------------------------------------------
+1. Buka index.html dengan Notepad
+2. Tekan Ctrl+H (Find & Replace)
+3. Cari   : GANTI_LINK_1
+   Ganti  : https://shopee.co.id/linkafiliasikamu
+4. Ulangi untuk GANTI_LINK_2 sampai GANTI_LINK_24
+
+
+------------------------------------------------------
+  CARA 2: TAMBAH FOTO PRODUK
+------------------------------------------------------
+1. Simpan foto di folder /images/
+   - Nama file TANPA SPASI
+   - Contoh: vacuum-cleaner.jpg, earphone-tws.jpg
+   - Ukuran ideal: 800x800px, format JPG/PNG/WEBP
+
+2. Buka index.html dengan Notepad
+3. Cari baris produk yang mau dikasih foto
+   Contoh cari: id:"vacuum-cleaner-mini"
+4. Temukan: foto:""
+5. Ganti menjadi: foto:"images/vacuum-cleaner.jpg"
+
+
+------------------------------------------------------
+  CARA 3: PASANG META PIXEL
+------------------------------------------------------
+1. Buka index.html dengan Notepad
+2. Cari baris: <!-- ③ META PIXEL
+3. Hapus <!-- di awal dan --> di akhir blok komentar
+4. Ganti PIXEL_ID_KAMU dengan ID Pixel-mu
+   Contoh: fbq('init', '1234567890123456');
+
+
+------------------------------------------------------
+  CARA 4: EDIT NAMA/HARGA PRODUK
+------------------------------------------------------
+Cari id produk yang ingin diubah, lalu edit:
+  name    = nama produk
+  price   = harga setelah diskon (contoh: "Rp85.000")
+  ori     = harga asli (contoh: "Rp199.000")
+  disc    = persen diskon (contoh: "-57%")
+  terjual = jumlah terjual (contoh: "12rb+")
+  desc    = deskripsi produk
+  viral   = true (ada badge viral) / false (tidak ada)
+
+
+------------------------------------------------------
+  CARA UPLOAD KE NETLIFY (DRAG & DROP FOLDER)
+------------------------------------------------------
+1. Buka netlify.com → login
+2. Klik site MurahBanget.id yang sudah ada
+3. Klik tab "Deploys"
+4. Scroll ke bawah → lihat kotak "Drag and drop"
+5. DRAG FOLDER "murahbanget" (bukan file-nya!)
+   ke kotak tersebut
+6. Tunggu upload selesai → website otomatis update
+
+PENTING: Selalu drag FOLDERnya, bukan index.html saja.
+Kalau hanya drag index.html, gambar tidak akan muncul
+karena folder /images/ tidak ikut terupload.
+
+
+------------------------------------------------------
+  TIPS TAMBAHAN
+------------------------------------------------------
+- Setelah edit, selalu simpan (Ctrl+S) sebelum upload
+- Test dulu di browser lokal: klik 2x index.html
+- Foto sebaiknya dikompres dulu di tinypng.com
+  agar website lebih cepat loading
+- Gunakan nama file yang konsisten dan deskriptif
+
+
+======================================================

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MurahBanget.id — Diskon Sampai 90%</title>
+
+<!--
+=============================================================
+  CARA EDIT FILE INI:
+  Buka dengan Notepad → Ctrl+H untuk Find & Replace
+
+  YANG PERLU DIGANTI:
+  ① Link Shopee  → cari GANTI_LINK_1 s/d GANTI_LINK_24
+  ② Foto produk  → ganti nilai "foto" dari "" menjadi "images/nama-foto.jpg"
+  ③ Meta Pixel   → hapus komentar di bawah & isi PIXEL_ID_KAMU
+  ④ Nama/harga   → edit bagian "DAFTAR PRODUK" di JavaScript
+
+  CARA TAMBAH FOTO:
+  - Simpan foto di folder /images/
+  - Nama file tanpa spasi, contoh: vacuum-cleaner.jpg
+  - Di data produk, isi: foto: "images/vacuum-cleaner.jpg"
+=============================================================
+-->
+
+<!-- ③ META PIXEL — hapus /* dan */ jika sudah punya Pixel ID -->
+<!--
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'PIXEL_ID_KAMU');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=PIXEL_ID_KAMU&ev=PageView&noscript=1"/></noscript>
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#E8353A;--red2:#c02b2f;--red-bg:#fff5f5;
+  --text:#1a1a1a;--text2:#555;--text3:#999;
+  --bg:#f7f7f7;--white:#fff;--border:#e8e8e8;
+  --gold:#f5a623;--green:#22a25a;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+
+/* NAV */
+.nav{background:var(--red);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;height:52px}
+.nav-logo{font-size:1.2rem;font-weight:700;color:#fff;cursor:pointer;letter-spacing:-0.3px;border:none;background:none;font-family:inherit}
+.nav-logo span{background:#fff;color:var(--red);border-radius:4px;padding:0 5px;margin-left:2px;font-size:0.75rem;font-weight:700;vertical-align:middle}
+.nav-right{font-size:0.72rem;color:rgba(255,255,255,0.85);display:flex;align-items:center;gap:6px}
+.nav-live{width:6px;height:6px;background:#4ade80;border-radius:50%;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#E8353A 0%,#c02b2f 100%);padding:1.5rem;color:#fff;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-60px;top:-60px;width:220px;height:220px;background:rgba(255,255,255,0.06);border-radius:50%}
+.hero-tag{display:inline-block;background:var(--gold);color:#7a4a00;font-size:0.65rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:3px;margin-bottom:0.6rem;letter-spacing:0.05em;text-transform:uppercase}
+.hero h1{font-size:1.5rem;font-weight:700;line-height:1.25;margin-bottom:0.4rem}
+.hero p{font-size:0.82rem;opacity:0.9;margin-bottom:1rem}
+.hero-stats{display:flex;gap:1.5rem}
+.stat-num{font-size:1.2rem;font-weight:700;display:block}
+.stat-lbl{font-size:0.65rem;opacity:0.8}
+
+/* COUNTDOWN */
+.countdown{background:#1a1a1a;padding:0.6rem 1.5rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
+.cd-label{font-size:0.7rem;color:#aaa;flex-shrink:0}
+.cd-timer{display:flex;align-items:center;gap:4px}
+.cd-block{background:#333;color:#fff;font-size:0.85rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:4px;min-width:30px;text-align:center}
+.cd-sep{color:#666;font-weight:700}
+.cd-desc{margin-left:auto;font-size:0.7rem;color:var(--gold);font-weight:600}
+
+/* FILTER KATEGORI */
+.cat-wrap{background:var(--white);border-bottom:1px solid var(--border);padding:0.75rem 1rem;display:flex;gap:0.5rem;overflow-x:auto;scrollbar-width:none}
+.cat-wrap::-webkit-scrollbar{display:none}
+.cat-btn{display:flex;flex-direction:column;align-items:center;gap:3px;padding:0.5rem 0.75rem;border-radius:8px;border:1px solid var(--border);background:var(--white);cursor:pointer;transition:all 0.15s;flex-shrink:0;min-width:60px;font-family:inherit}
+.cat-btn:hover{border-color:var(--red);background:var(--red-bg)}
+.cat-btn.active{border-color:var(--red);background:var(--red);color:#fff}
+.cat-icon{font-size:1.25rem;line-height:1}
+.cat-lbl{font-size:0.6rem;font-weight:600;white-space:nowrap}
+.cat-btn:not(.active) .cat-lbl{color:var(--text2)}
+
+/* SORT BAR */
+.sort-bar{padding:0.6rem 1rem;display:flex;align-items:center;justify-content:space-between;background:var(--white);border-bottom:1px solid var(--border)}
+.sort-count{font-size:0.78rem;color:var(--text2)}
+.sort-count strong{color:var(--text);font-weight:600}
+.sort-tabs{display:flex;border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.sort-tab{font-size:0.68rem;padding:0.3rem 0.65rem;background:var(--white);border:none;cursor:pointer;color:var(--text2);font-family:inherit;transition:all 0.15s;border-right:1px solid var(--border)}
+.sort-tab:last-child{border-right:none}
+.sort-tab.active{background:var(--red);color:#fff}
+
+/* GRID PRODUK */
+.catalog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:1px;background:var(--border)}
+.card{background:var(--white);cursor:pointer;transition:background 0.15s;position:relative}
+.card:hover{background:#fafafa}
+
+/* CARD — GAMBAR */
+.card-img{aspect-ratio:1/1;background:#f0f0f0;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.card-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.card-img-icon{font-size:2.5rem;opacity:0.3}
+.card-img-hint{font-size:0.58rem;color:var(--text3);margin-top:4px}
+.badge-disc{position:absolute;top:7px;left:7px;background:var(--red);color:#fff;font-size:0.58rem;font-weight:700;padding:0.15rem 0.4rem;border-radius:3px;z-index:1}
+.badge-viral{position:absolute;top:7px;right:7px;background:var(--gold);color:#7a4a00;font-size:0.55rem;font-weight:700;padding:0.15rem 0.4rem;border-radius:3px;z-index:1}
+.badge-terjual{position:absolute;bottom:7px;left:7px;background:rgba(0,0,0,0.55);color:#fff;font-size:0.55rem;padding:0.15rem 0.5rem;border-radius:3px;z-index:1}
+
+/* CARD — INFO */
+.card-body{padding:0.65rem 0.75rem 0.75rem}
+.card-cat-tag{font-size:0.58rem;color:var(--red);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.2rem}
+.card-name{font-size:0.82rem;font-weight:600;line-height:1.35;margin-bottom:0.35rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-price-row{display:flex;align-items:baseline;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.5rem}
+.card-price{font-size:0.95rem;font-weight:700;color:var(--red)}
+.card-ori{font-size:0.7rem;color:var(--text3);text-decoration:line-through}
+.card-actions{display:flex;gap:0.4rem}
+.btn-beli{flex:1;font-size:0.68rem;font-weight:600;padding:0.45rem 0.5rem;background:#1a1a1a;color:#fff;border:none;border-radius:5px;cursor:pointer;font-family:inherit;transition:background 0.15s}
+.btn-beli:hover{background:#333}
+.btn-share{width:30px;height:30px;border:1px solid #1a1a1a;background:#1a1a1a;border-radius:5px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:0.85rem;color:#fff;position:relative;transition:all 0.15s;flex-shrink:0}
+.btn-share:hover{background:#333;border-color:#333;color:#fff}
+.share-tip{position:absolute;bottom:calc(100% + 5px);right:0;background:var(--text);color:#fff;font-size:0.58rem;white-space:nowrap;padding:0.25rem 0.5rem;border-radius:3px;opacity:0;pointer-events:none;transition:opacity 0.15s;z-index:10}
+.share-tip.show{opacity:1}
+
+/* VIEWS */
+.view{display:none}
+.view.active{display:block}
+
+/* DETAIL PAGE */
+.detail-topbar{background:var(--white);border-bottom:1px solid var(--border);padding:0.75rem 1rem;display:flex;align-items:center;gap:0.75rem;position:sticky;top:52px;z-index:50}
+.back-btn{border:none;background:none;cursor:pointer;display:flex;align-items:center;gap:5px;font-size:0.8rem;color:var(--text2);font-family:inherit;padding:0}
+.back-btn:hover{color:var(--red)}
+.detail-inner{max-width:680px;margin:0 auto;padding:1rem}
+
+/* DETAIL — GAMBAR */
+.detail-img-box{aspect-ratio:1/1;background:var(--white);border:1px solid var(--border);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:1rem;position:relative;overflow:hidden}
+.detail-img-box img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.detail-img-icon{font-size:4rem;opacity:0.25}
+.detail-img-hint{font-size:0.65rem;color:var(--text3);text-align:center;line-height:1.7}
+.detail-img-hint strong{display:block;color:var(--text2);font-weight:500}
+
+.detail-cat-pill{display:inline-flex;align-items:center;gap:4px;background:var(--red-bg);color:var(--red);font-size:0.68rem;font-weight:600;padding:0.25rem 0.65rem;border-radius:20px;margin-bottom:0.6rem}
+.detail-name{font-size:1.15rem;font-weight:700;line-height:1.35;margin-bottom:0.75rem}
+.detail-price-box{background:var(--red-bg);border-radius:8px;padding:0.85rem 1rem;margin-bottom:1rem;display:flex;align-items:center;gap:1rem}
+.detail-price-now{font-size:1.5rem;font-weight:700;color:var(--red)}
+.detail-price-ori{font-size:0.78rem;color:var(--text3);text-decoration:line-through}
+.detail-price-disc{font-size:0.72rem;font-weight:700;color:var(--green)}
+
+.detail-specs{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:1rem}
+.spec-row{display:flex;justify-content:space-between;padding:0.6rem 0.9rem;border-bottom:1px solid var(--border);font-size:0.8rem}
+.spec-row:last-child{border-bottom:none}
+.spec-key{color:var(--text3)}
+.spec-val{color:var(--text);font-weight:500;text-align:right}
+
+.detail-desc-box{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:0.85rem 1rem;margin-bottom:1rem;font-size:0.82rem;color:var(--text2);line-height:1.7}
+
+/* URL BOX — KUNCI META ADS */
+.url-box{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:0.85rem 1rem;margin-bottom:1rem}
+.url-label{font-size:0.62rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;display:flex;align-items:center;gap:5px}
+.url-label i{color:var(--red)}
+.url-value{font-size:0.7rem;color:var(--text2);font-family:monospace;background:var(--bg);padding:0.45rem 0.65rem;border-radius:5px;margin-bottom:0.6rem;word-break:break-all;line-height:1.5}
+.btn-copy-url{width:100%;padding:0.55rem;background:var(--white);border:1px solid var(--border);border-radius:5px;font-size:0.7rem;font-weight:600;cursor:pointer;font-family:inherit;color:var(--text2);display:flex;align-items:center;justify-content:center;gap:5px;transition:all 0.15s}
+.btn-copy-url:hover{border-color:var(--red);color:var(--red)}
+.btn-copy-url.copied{background:var(--green);border-color:var(--green);color:#fff}
+
+.btn-shopee-big{width:100%;padding:0.9rem;background:var(--red);color:#fff;border:none;border-radius:8px;font-size:0.88rem;font-weight:700;cursor:pointer;font-family:inherit;margin-bottom:0.6rem;transition:background 0.15s;display:flex;align-items:center;justify-content:center;gap:6px}
+.btn-shopee-big:hover{background:var(--red2)}
+
+.pixel-tip{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:0.7rem 0.85rem;font-size:0.72rem;color:#92400e;line-height:1.6;display:flex;gap:7px}
+
+.empty{text-align:center;padding:3rem 1rem;color:var(--text3);font-size:0.85rem;display:none}
+
+@media(max-width:480px){
+  .hero h1{font-size:1.25rem}
+  .catalog-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════
+     VIEW 1: KATALOG
+═══════════════════════════ -->
+<div class="view active" id="view-catalog">
+
+  <nav class="nav">
+    <button class="nav-logo" id="logo-btn">MurahBanget<span>.id</span></button>
+    <div class="nav-right">
+      <div class="nav-live"></div>
+      Flash Sale Aktif
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-tag">🔥 Produk Viral Shopee</div>
+    <h1>Diskon Sampai 90%<br>Semua Kategori</h1>
+    <p>Produk trending pilihan, harga terbaik, langsung dari Shopee</p>
+    <div class="hero-stats">
+      <div><span class="stat-num">500+</span><span class="stat-lbl">Produk</span></div>
+      <div><span class="stat-num">8</span><span class="stat-lbl">Kategori</span></div>
+      <div><span class="stat-num">50rb+</span><span class="stat-lbl">Pembeli</span></div>
+    </div>
+  </div>
+
+  <div class="countdown">
+    <span class="cd-label">⏰ Flash Sale berakhir:</span>
+    <div class="cd-timer">
+      <span class="cd-block" id="cd-h">00</span>
+      <span class="cd-sep">:</span>
+      <span class="cd-block" id="cd-m">00</span>
+      <span class="cd-sep">:</span>
+      <span class="cd-block" id="cd-s">00</span>
+    </div>
+    <span class="cd-desc">Jangan sampai kehabisan!</span>
+  </div>
+
+  <div class="cat-wrap">
+    <button class="cat-btn active" data-cat="semua"><span class="cat-icon">🛒</span><span class="cat-lbl">Semua</span></button>
+    <button class="cat-btn" data-cat="fashion"><span class="cat-icon">👗</span><span class="cat-lbl">Fashion</span></button>
+    <button class="cat-btn" data-cat="rumah"><span class="cat-icon">🏠</span><span class="cat-lbl">Rumah</span></button>
+    <button class="cat-btn" data-cat="elektronik"><span class="cat-icon">📱</span><span class="cat-lbl">Elektronik</span></button>
+    <button class="cat-btn" data-cat="kecantikan"><span class="cat-icon">💄</span><span class="cat-lbl">Kecantikan</span></button>
+    <button class="cat-btn" data-cat="makanan"><span class="cat-icon">🍜</span><span class="cat-lbl">Makanan</span></button>
+    <button class="cat-btn" data-cat="bayi"><span class="cat-icon">🍼</span><span class="cat-lbl">Bayi</span></button>
+    <button class="cat-btn" data-cat="olahraga"><span class="cat-icon">🏋️</span><span class="cat-lbl">Olahraga</span></button>
+    <button class="cat-btn" data-cat="otomotif"><span class="cat-icon">🚗</span><span class="cat-lbl">Otomotif</span></button>
+  </div>
+
+  <div class="sort-bar">
+    <span class="sort-count">Menampilkan <strong id="count-val">24</strong> produk</span>
+    <div class="sort-tabs">
+      <button class="sort-tab active" data-sort="viral">🔥 Viral</button>
+      <button class="sort-tab" data-sort="diskon">% Diskon</button>
+      <button class="sort-tab" data-sort="termurah">Termurah</button>
+    </div>
+  </div>
+
+  <div class="catalog-grid" id="catalog"></div>
+  <div class="empty" id="empty">Tidak ada produk di kategori ini.</div>
+
+</div>
+
+<!-- ═══════════════════════════
+     VIEW 2: DETAIL PRODUK
+═══════════════════════════ -->
+<div class="view" id="view-detail">
+
+  <nav class="nav">
+    <button class="nav-logo" id="logo-btn2">MurahBanget<span>.id</span></button>
+    <div class="nav-right">
+      <div class="nav-live"></div>
+      Flash Sale Aktif
+    </div>
+  </nav>
+
+  <div class="detail-topbar">
+    <button class="back-btn" id="back-btn">
+      <i class="ti ti-arrow-left"></i> Kembali ke katalog
+    </button>
+    <span style="font-size:0.75rem;color:var(--text3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="d-breadcrumb"></span>
+  </div>
+
+  <div class="detail-inner">
+    <div class="detail-img-box" id="d-img-box">
+      <div class="detail-img-icon" id="d-icon"></div>
+      <div class="detail-img-hint">
+        <strong>Ganti dengan foto produk asli</strong>
+        Simpan foto di folder /images/<br>
+        lalu isi nilai "foto" di data produk
+      </div>
+    </div>
+
+    <div class="detail-cat-pill">
+      <i class="ti ti-tag"></i>
+      <span id="d-cat"></span>
+    </div>
+    <div class="detail-name" id="d-name"></div>
+
+    <div class="detail-price-box">
+      <div class="detail-price-now" id="d-price"></div>
+      <div>
+        <div class="detail-price-ori" id="d-ori"></div>
+        <div class="detail-price-disc" id="d-disc"></div>
+      </div>
+    </div>
+
+    <div class="detail-specs" id="d-specs"></div>
+    <div class="detail-desc-box" id="d-desc"></div>
+
+    <!-- KOTAK URL UNTUK META ADS -->
+    <div class="url-box">
+      <div class="url-label">
+        <i class="ti ti-link"></i>
+        Link halaman ini — pasang di iklan Meta Ads
+      </div>
+      <div class="url-value" id="d-url"></div>
+      <button class="btn-copy-url" id="btn-copy-url">
+        <i class="ti ti-copy"></i> Salin link untuk Meta Ads
+      </button>
+    </div>
+
+    <button class="btn-shopee-big" id="d-shopee-btn">
+      <i class="ti ti-shopping-cart"></i> Beli Sekarang di Shopee
+    </button>
+
+    <div class="pixel-tip">
+      <i class="ti ti-bulb" style="flex-shrink:0;margin-top:1px"></i>
+      <div>Pasang iklan Meta dengan link di atas — bukan link Shopee langsung. Meta Pixel akan tracking siapa yang kunjungi halaman ini sehingga kamu bisa retargeting dan optimasi biaya iklan.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     DAFTAR PRODUK — EDIT DI SINI
+     
+     foto: ""              = belum ada foto (tampil emoji)
+     foto: "images/a.jpg"  = pakai foto dari folder images/
+     shopee: "GANTI_LINK_X" = ganti dengan link affiliate Shopee
+═══════════════════════════════════════════════════════ -->
+<script>
+const products = [
+  {id:"dress-viral-2026",name:"Dress Crinkle Airflow Viral TikTok",cat:"fashion",viral:true,price:"Rp85.000",ori:"Rp199.000",disc:"-57%",terjual:"12rb+",foto:"",icon:"👗",shopee:"GANTI_LINK_1",desc:"Dress crinkle airflow yang viral di TikTok. Bahan adem, anti kusut, cocok untuk hari-hari santai maupun kondangan casual.",specs:[["Bahan","Crinkle airflow"],["Ukuran","S-XXL"],["Warna","15 pilihan"],["Berat","250gr"]]},
+  {id:"vacuum-cleaner-mini",name:"Vacuum Cleaner Mini Wireless Viral",cat:"rumah",viral:true,price:"Rp79.000",ori:"Rp259.000",disc:"-70%",terjual:"8rb+",foto:"",icon:"🏠",shopee:"GANTI_LINK_2",desc:"Vacuum cleaner mini wireless yang lagi viral. Mudah dibawa, baterai tahan lama, cocok untuk bersihin sofa, meja, dan mobil.",specs:[["Daya hisap","8000Pa"],["Baterai","2000mAh"],["Berat","450gr"],["Garansi","6 bulan"]]},
+  {id:"earphone-tws-viral",name:"TWS Earphone Bluetooth 5.3 Bass",cat:"elektronik",viral:true,price:"Rp45.000",ori:"Rp189.000",disc:"-76%",terjual:"25rb+",foto:"",icon:"📱",shopee:"GANTI_LINK_3",desc:"TWS earphone dengan Bluetooth 5.3 terbaru. Bass jernih, latency rendah, cocok gaming maupun dengerin musik.",specs:[["Bluetooth","5.3"],["Battery","300mAh case"],["Latency","<60ms"],["Garansi","3 bulan"]]},
+  {id:"skincare-snail-serum",name:"Snail Mucin Serum 96% Viral Korea",cat:"kecantikan",viral:true,price:"Rp55.000",ori:"Rp180.000",disc:"-69%",terjual:"30rb+",foto:"",icon:"💄",shopee:"GANTI_LINK_4",desc:"Serum snail mucin 96% yang viral dari Korea. Melembabkan, mencerahkan, dan membantu regenerasi kulit secara alami.",specs:[["Kandungan","Snail Mucin 96%"],["Volume","100ml"],["Kulit","Semua jenis"],["BPOM","Terdaftar"]]},
+  {id:"mie-instant-viral",name:"Mie Instan Kuah Kari Viral 1 Dus",cat:"makanan",viral:false,price:"Rp62.000",ori:"Rp95.000",disc:"-35%",terjual:"5rb+",foto:"",icon:"🍜",shopee:"GANTI_LINK_5",desc:"Mie instan kuah kari yang lagi hits di medsos. Rasa autentik, porsi kenyang, cocok untuk makan siang atau malam.",specs:[["Isi","10 bungkus"],["Berat","850gr"],["Expired","12 bulan"],["Halal","MUI"]]},
+  {id:"pampers-bayi-viral",name:"Pampers Bayi Ultra Thin Dry",cat:"bayi",viral:true,price:"Rp89.000",ori:"Rp149.000",disc:"-40%",terjual:"7rb+",foto:"",icon:"🍼",shopee:"GANTI_LINK_6",desc:"Pampers ultra thin dengan teknologi dry surface. Tipis tapi sangat menyerap, lembut di kulit bayi, anti iritasi.",specs:[["Ukuran","S/M/L/XL/XXL"],["Isi","46 pcs"],["Bahan","Bebas fluoresen"],["Sertifikasi","SNI"]]},
+  {id:"resistance-band-set",name:"Resistance Band Set 5 Level Viral",cat:"olahraga",viral:true,price:"Rp39.000",ori:"Rp129.000",disc:"-70%",terjual:"15rb+",foto:"",icon:"🏋️",shopee:"GANTI_LINK_7",desc:"Set resistance band 5 level untuk latihan di rumah. Viral di Instagram karena efektif untuk pembentukan tubuh tanpa gym.",specs:[["Level","5 tingkat"],["Material","Natural latex"],["Max Load","150kg"],["Garansi","3 bulan"]]},
+  {id:"car-holder-viral",name:"Car Phone Holder Magnetic Viral",cat:"otomotif",viral:true,price:"Rp35.000",ori:"Rp120.000",disc:"-71%",terjual:"20rb+",foto:"",icon:"🚗",shopee:"GANTI_LINK_8",desc:"Car phone holder magnetic yang viral. Magnet super kuat, 360° rotation, compatible semua HP, mudah dipasang.",specs:[["Magnet","N52 neodymium"],["Rotasi","360°"],["Kompatibel","Semua HP"],["Garansi","6 bulan"]]},
+  {id:"celana-cargo-viral",name:"Celana Cargo Pria Viral StreetWear",cat:"fashion",viral:true,price:"Rp99.000",ori:"Rp280.000",disc:"-65%",terjual:"9rb+",foto:"",icon:"👗",shopee:"GANTI_LINK_9",desc:"Celana cargo streetwear yang viral di media sosial. Banyak kantong, bahan tebal, cocok untuk hangout dan kegiatan outdoor.",specs:[["Bahan","Japanese drill"],["Ukuran","28-36"],["Warna","6 pilihan"],["Berat","450gr"]]},
+  {id:"rak-dapur-viral",name:"Rak Dapur Stainless 3 Susun Viral",cat:"rumah",viral:false,price:"Rp115.000",ori:"Rp299.000",disc:"-62%",terjual:"6rb+",foto:"",icon:"🏠",shopee:"GANTI_LINK_10",desc:"Rak dapur stainless 3 susun yang viral di TikTok. Anti karat, kuat, mudah dipasang tanpa bor, cocok untuk dapur kecil.",specs:[["Material","Stainless 304"],["Ukuran","60×30×90cm"],["Beban Max","30kg/susun"],["Garansi","1 tahun"]]},
+  {id:"powerbank-20000",name:"Powerbank 20000mAh Fast Charge 65W",cat:"elektronik",viral:true,price:"Rp129.000",ori:"Rp450.000",disc:"-71%",terjual:"18rb+",foto:"",icon:"📱",shopee:"GANTI_LINK_11",desc:"Powerbank 20000mAh dengan fast charge 65W. Isi penuh HP dalam 30 menit, bisa charge laptop, ada display digital.",specs:[["Kapasitas","20000mAh"],["Fast Charge","65W PD"],["Output","USB-A + USB-C"],["Garansi","1 tahun"]]},
+  {id:"sunscreen-viral",name:"Sunscreen SPF50 PA++++ Viral 2025",cat:"kecantikan",viral:true,price:"Rp49.000",ori:"Rp145.000",disc:"-66%",terjual:"40rb+",foto:"",icon:"💄",shopee:"GANTI_LINK_12",desc:"Sunscreen SPF50 PA++++ yang paling viral tahun ini. Tidak lengket, tidak white cast, cocok untuk kulit berminyak.",specs:[["SPF","50 PA++++"],["Volume","50ml"],["Tekstur","Lightweight gel"],["BPOM","Terdaftar"]]},
+  {id:"kopi-cold-brew",name:"Kopi Arabika Cold Brew Ready Drink",cat:"makanan",viral:true,price:"Rp18.000",ori:"Rp35.000",disc:"-49%",terjual:"50rb+",foto:"",icon:"🍜",shopee:"GANTI_LINK_13",desc:"Cold brew kopi arabika siap minum yang viral. Rasa tidak asam, kadar kafein pas, bisa diminum tanpa tambahan gula.",specs:[["Volume","250ml"],["Kafein","120mg"],["Kalori","15kkal"],["Expired","3 bulan"]]},
+  {id:"mainan-montessori",name:"Mainan Kayu Montessori Set Viral",cat:"bayi",viral:true,price:"Rp75.000",ori:"Rp220.000",disc:"-66%",terjual:"11rb+",foto:"",icon:"🍼",shopee:"GANTI_LINK_14",desc:"Set mainan kayu Montessori yang viral untuk stimulasi tumbuh kembang anak 1-3 tahun. Aman, bebas BPA, edukatif.",specs:[["Usia","1-3 tahun"],["Material","Kayu pinus"],["Set","12 pcs"],["Sertifikasi","SNI Toys"]]},
+  {id:"yoga-mat-8mm",name:"Yoga Mat 8mm Anti Slip Viral",cat:"olahraga",viral:false,price:"Rp89.000",ori:"Rp250.000",disc:"-64%",terjual:"14rb+",foto:"",icon:"🏋️",shopee:"GANTI_LINK_15",desc:"Yoga mat tebal 8mm dengan permukaan anti slip. Viral karena kualitas premium dengan harga yang sangat terjangkau.",specs:[["Tebal","8mm"],["Ukuran","183×61cm"],["Material","TPE ramah lingkungan"],["Berat","1.1kg"]]},
+  {id:"dashcam-wifi-4k",name:"Dashcam WiFi 4K Night Vision Viral",cat:"otomotif",viral:true,price:"Rp189.000",ori:"Rp599.000",disc:"-68%",terjual:"8rb+",foto:"",icon:"🚗",shopee:"GANTI_LINK_16",desc:"Dashcam WiFi 4K dengan night vision yang viral. Rekam otomatis, koneksi ke HP via WiFi, parking mode aktif.",specs:[["Resolusi","4K 30fps"],["WiFi","Real-time connect"],["Night Vision","Sony IMX sensor"],["Garansi","1 tahun"]]},
+  {id:"tas-mini-crossbody",name:"Tas Mini Crossbody Kulit Viral",cat:"fashion",viral:true,price:"Rp75.000",ori:"Rp225.000",disc:"-67%",terjual:"22rb+",foto:"",icon:"👗",shopee:"GANTI_LINK_17",desc:"Tas mini crossbody bahan kulit PU viral di Instagram. Muat HP, dompet, dan kunci, cocok untuk hangout ringan.",specs:[["Bahan","PU leather"],["Ukuran","20×15×8cm"],["Tali","Adjustable"],["Warna","8 pilihan"]]},
+  {id:"air-fryer-2l",name:"Air Fryer Mini 2L Viral No-Minyak",cat:"rumah",viral:true,price:"Rp219.000",ori:"Rp650.000",disc:"-66%",terjual:"10rb+",foto:"",icon:"🏠",shopee:"GANTI_LINK_18",desc:"Air fryer mini 2L yang viral untuk masak sehat tanpa minyak. Cocok untuk 1-2 orang, hemat listrik, mudah dibersihkan.",specs:[["Kapasitas","2 Liter"],["Watt","1200W"],["Suhu","80-200°C"],["Garansi","1 tahun"]]},
+  {id:"led-strip-rgb",name:"LED Strip RGB WiFi Alexa 5 Meter",cat:"elektronik",viral:true,price:"Rp55.000",ori:"Rp185.000",disc:"-70%",terjual:"35rb+",foto:"",icon:"📱",shopee:"GANTI_LINK_19",desc:"LED strip RGB yang viral untuk dekorasi kamar. Kontrol via HP, kompatibel Alexa & Google Home, 16 juta warna.",specs:[["Panjang","5 meter"],["Kontrol","App + Voice"],["Warna","16 juta RGB"],["Garansi","6 bulan"]]},
+  {id:"serum-vitamin-c",name:"Serum Vitamin C 20% Brightening",cat:"kecantikan",viral:false,price:"Rp69.000",ori:"Rp199.000",disc:"-65%",terjual:"28rb+",foto:"",icon:"💄",shopee:"GANTI_LINK_20",desc:"Serum vitamin C 20% untuk mencerahkan dan meratakan warna kulit. Formula stabil, tidak mengiritasi, cocok pagi hari.",specs:[["Kandungan","Vitamin C 20%"],["Volume","30ml"],["Kulit","Normal-berminyak"],["BPOM","Terdaftar"]]},
+  {id:"snack-seblak-viral",name:"Snack Keripik Seblak Viral 1 Box",cat:"makanan",viral:true,price:"Rp45.000",ori:"Rp85.000",disc:"-47%",terjual:"60rb+",foto:"",icon:"🍜",shopee:"GANTI_LINK_21",desc:"Keripik seblak level pedas yang paling viral bulan ini. Renyah, bumbu otentik, cocok untuk camilan kapan saja.",specs:[["Isi","10 sachet"],["Level","Mild/Hot/Extra Hot"],["Halal","MUI"],["Expired","6 bulan"]]},
+  {id:"stroller-lipat",name:"Stroller Bayi Lipat Ultra Ringan",cat:"bayi",viral:false,price:"Rp399.000",ori:"Rp999.000",disc:"-60%",terjual:"3rb+",foto:"",icon:"🍼",shopee:"GANTI_LINK_22",desc:"Stroller bayi yang bisa dilipat hanya dalam 1 detik. Ultra ringan 5kg, mudah dibawa ke mana-mana, nyaman untuk bayi.",specs:[["Berat","5kg"],["Max Beban","25kg"],["Lipat","One-click fold"],["Garansi","1 tahun"]]},
+  {id:"sepatu-lari-cloudfoam",name:"Sepatu Lari Cloudfoam Ultra Viral",cat:"olahraga",viral:true,price:"Rp189.000",ori:"Rp550.000",disc:"-66%",terjual:"16rb+",foto:"",icon:"🏋️",shopee:"GANTI_LINK_23",desc:"Sepatu lari dengan sol cloudfoam yang viral karena empuk banget. Ringan, breathable, cocok untuk lari dan olahraga harian.",specs:[["Sole","Cloudfoam"],["Upper","Mesh breathable"],["Ukuran","36-45"],["Berat","250gr"]]},
+  {id:"action-cam-helm",name:"Kamera Helm Motor Action Cam 4K",cat:"otomotif",viral:true,price:"Rp159.000",ori:"Rp480.000",disc:"-67%",terjual:"9rb+",foto:"",icon:"🚗",shopee:"GANTI_LINK_24",desc:"Action cam 4K yang viral untuk biker. Waterproof, anti getar, bisa dipasang di helm atau motor, baterai 90 menit.",specs:[["Resolusi","4K 30fps"],["Waterproof","IPX6"],["Baterai","1200mAh"],["Garansi","6 bulan"]]}
+];
+
+/* ═══════════════════════════════════════════
+   JANGAN EDIT DI BAWAH GARIS INI
+═══════════════════════════════════════════ */
+const BASE = window.location.origin + window.location.pathname;
+let currentCat = "semua", currentSort = "viral", activeProd = null;
+
+function getUrl(id){ return BASE + "#produk-" + id; }
+
+function doCopy(text){
+  navigator.clipboard ? navigator.clipboard.writeText(text)
+    : (()=>{ const t=document.createElement("textarea"); t.value=text; document.body.appendChild(t); t.select(); document.execCommand("copy"); document.body.removeChild(t); })();
+}
+
+function sortList(list){
+  if(currentSort==="viral") return [...list].sort((a,b)=>(b.viral?1:0)-(a.viral?1:0));
+  if(currentSort==="diskon") return [...list].sort((a,b)=>parseInt(b.disc)-parseInt(a.disc));
+  if(currentSort==="termurah") return [...list].sort((a,b)=>parseInt(a.price.replace(/\D/g,""))-parseInt(b.price.replace(/\D/g,"")));
+  return list;
+}
+
+function renderCatalog(){
+  const grid = document.getElementById("catalog");
+  const empty = document.getElementById("empty");
+  let list = currentCat==="semua" ? products : products.filter(p=>p.cat===currentCat);
+  list = sortList(list);
+  document.getElementById("count-val").textContent = list.length;
+  if(!list.length){ grid.innerHTML=""; empty.style.display="block"; return; }
+  empty.style.display="none";
+  grid.innerHTML = list.map(p=>`
+    <div class="card" data-id="${p.id}">
+      <div class="card-img">
+        ${p.foto ? `<img src="${p.foto}" alt="${p.name}" loading="lazy">` : `<div class="card-img-icon">${p.icon}</div><div class="card-img-hint">Belum ada foto</div>`}
+        <span class="badge-disc">${p.disc}</span>
+        ${p.viral?'<span class="badge-viral">🔥 Viral</span>':''}
+        <span class="badge-terjual">${p.terjual} terjual</span>
+      </div>
+      <div class="card-body">
+        <div class="card-cat-tag">${p.cat}</div>
+        <div class="card-name">${p.name}</div>
+        <div class="card-price-row">
+          <span class="card-price">${p.price}</span>
+          <span class="card-ori">${p.ori}</span>
+        </div>
+        <div class="card-actions">
+          <button class="btn-beli" data-id="${p.id}">Beli →</button>
+          <button class="btn-share" data-id="${p.id}" title="Salin link untuk Meta Ads">
+            <i class="ti ti-copy"></i>
+            <span class="share-tip" id="tip-${p.id}">Link disalin!</span>
+          </button>
+        </div>
+      </div>
+    </div>`).join("");
+}
+
+function showDetail(id){
+  const p = products.find(x=>x.id===id);
+  if(!p) return;
+  activeProd = p;
+  const imgBox = document.getElementById("d-img-box");
+  const oldImg = imgBox.querySelector("img");
+  if(oldImg) oldImg.remove();
+  const icon = document.getElementById("d-icon");
+  const hint = imgBox.querySelector(".detail-img-hint");
+  if(p.foto){
+    icon.style.display="none";
+    hint.style.display="none";
+    const img = document.createElement("img");
+    img.src = p.foto; img.alt = p.name;
+    imgBox.prepend(img);
+  } else {
+    icon.style.display="";
+    hint.style.display="";
+    icon.textContent = p.icon;
+  }
+  document.getElementById("d-cat").textContent = p.cat;
+  document.getElementById("d-breadcrumb").textContent = p.cat+" › "+p.name.substring(0,28)+"...";
+  document.getElementById("d-name").textContent = p.name;
+  document.getElementById("d-price").textContent = p.price;
+  document.getElementById("d-ori").textContent = p.ori;
+  document.getElementById("d-disc").textContent = "Hemat "+p.disc;
+  document.getElementById("d-desc").textContent = p.desc;
+  document.getElementById("d-specs").innerHTML = p.specs.map(s=>`<div class="spec-row"><span class="spec-key">${s[0]}</span><span class="spec-val">${s[1]}</span></div>`).join("");
+  const url = getUrl(p.id);
+  document.getElementById("d-url").textContent = url;
+  const cb = document.getElementById("btn-copy-url");
+  cb.innerHTML='<i class="ti ti-copy"></i> Salin link untuk Meta Ads';
+  cb.classList.remove("copied");
+  cb.onclick = ()=>{
+    doCopy(url);
+    cb.innerHTML='<i class="ti ti-check"></i> Tersalin!';
+    cb.classList.add("copied");
+    setTimeout(()=>{ cb.innerHTML='<i class="ti ti-copy"></i> Salin link untuk Meta Ads'; cb.classList.remove("copied"); },2500);
+  };
+  document.getElementById("d-shopee-btn").onclick = ()=>window.open(p.shopee,"_blank");
+  document.getElementById("view-catalog").classList.remove("active");
+  document.getElementById("view-detail").classList.add("active");
+  window.scrollTo(0,0);
+}
+
+function showCatalog(){
+  document.getElementById("view-catalog").classList.add("active");
+  document.getElementById("view-detail").classList.remove("active");
+  window.scrollTo(0,0);
+}
+
+function handleHash(){
+  const h = window.location.hash;
+  h.startsWith("#produk-") ? showDetail(h.replace("#produk-","")) : showCatalog();
+}
+
+document.querySelectorAll(".cat-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".cat-btn").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    currentCat=btn.dataset.cat;
+    renderCatalog();
+  });
+});
+
+document.querySelectorAll(".sort-tab").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".sort-tab").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    currentSort=btn.dataset.sort;
+    renderCatalog();
+  });
+});
+
+document.getElementById("catalog").addEventListener("click",e=>{
+  const beli=e.target.closest(".btn-beli");
+  const share=e.target.closest(".btn-share");
+  const card=e.target.closest(".card");
+  if(share){
+    e.stopPropagation();
+    doCopy(getUrl(share.dataset.id));
+    const tip=document.getElementById("tip-"+share.dataset.id);
+    if(tip){ tip.classList.add("show"); setTimeout(()=>tip.classList.remove("show"),2000); }
+    const ic=share.querySelector("i");
+    if(ic){ ic.className="ti ti-check"; setTimeout(()=>ic.className="ti ti-copy",2000); }
+    return;
+  }
+  if(beli){ e.stopPropagation(); const p=products.find(x=>x.id===beli.dataset.id); if(p) window.open(p.shopee,"_blank"); return; }
+  if(card){ window.location.hash="produk-"+card.dataset.id; }
+});
+
+["back-btn","logo-btn","logo-btn2"].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el) el.addEventListener("click",()=>{ window.location.hash=""; showCatalog(); });
+});
+
+window.addEventListener("hashchange",handleHash);
+
+function updateCountdown(){
+  const now=new Date(), end=new Date(now);
+  end.setHours(23,59,59,0);
+  const d=end-now;
+  const h=Math.floor(d/3600000), m=Math.floor((d%3600000)/60000), s=Math.floor((d%60000)/1000);
+  document.getElementById("cd-h").textContent=String(h).padStart(2,"0");
+  document.getElementById("cd-m").textContent=String(m).padStart(2,"0");
+  document.getElementById("cd-s").textContent=String(s).padStart(2,"0");
+}
+setInterval(updateCountdown,1000);
+updateCountdown();
+renderCatalog();
+handleHash();
+</script>
+</body>
+</html>

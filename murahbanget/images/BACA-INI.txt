@@ -1,0 +1,13 @@
+Simpan semua foto produk di folder ini.
+
+Aturan penamaan file:
+- Tanpa spasi → gunakan tanda hubung (-)
+- Huruf kecil semua
+- Contoh: vacuum-cleaner.jpg, earphone-tws.jpg
+
+Ukuran ideal: 800x800 piksel, format JPG atau WEBP
+Kompres foto di: tinypng.com (gratis)
+
+Setelah foto disimpan di sini, edit index.html:
+Cari  : foto:""
+Ganti : foto:"images/nama-foto.jpg"
