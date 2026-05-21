@@ -188,7 +188,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 ═══════════════════════════ -->
 <div class="view active" id="view-catalog">
 
-  <nav class="nav">
+  <nav class="nav">s
     <button class="nav-logo" id="logo-btn">MurahBanget<span>.id</span></button>
     <div class="nav-right">
       <div class="nav-live"></div>
@@ -296,11 +296,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
     <div class="url-box">
       <div class="url-label">
         <i class="ti ti-link"></i>
-        Link halaman ini — pasang di iklan Meta Ads
+        <!-- Link halaman ini — pasang di iklan Meta Ads -->
       </div>
       <div class="url-value" id="d-url"></div>
       <button class="btn-copy-url" id="btn-copy-url">
-        <i class="ti ti-copy"></i> Salin link untuk Meta Ads
+        <i class="ti ti-copy"></i>Salin link 
       </button>
     </div>
 
@@ -310,7 +310,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 
     <div class="pixel-tip">
       <i class="ti ti-bulb" style="flex-shrink:0;margin-top:1px"></i>
-      <div>Pasang iklan Meta dengan link di atas — bukan link Shopee langsung. Meta Pixel akan tracking siapa yang kunjungi halaman ini sehingga kamu bisa retargeting dan optimasi biaya iklan.</div>
+      <!-- <div>Pasang iklan Meta dengan link di atas — bukan link Shopee langsung. Meta Pixel akan tracking siapa yang kunjungi halaman ini sehingga kamu bisa retargeting dan optimasi biaya iklan.</div> -->
     </div>
   </div>
 </div>
@@ -860,7 +860,7 @@ function showDetail(id){
   const url = getUrl(p.id);
   document.getElementById("d-url").textContent = url;
   const cb = document.getElementById("btn-copy-url");
-  cb.innerHTML='<i class="ti ti-copy"></i> Salin link untuk Meta Ads';
+  cb.innerHTML='<i class="ti ti-copy"></i> Salin link untuk';
   cb.classList.remove("copied");
   cb.onclick = ()=>{
     doCopy(url);
